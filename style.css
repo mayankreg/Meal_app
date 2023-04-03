@@ -1,0 +1,647 @@
+
+/* hiding scroll bar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    overflow: hidden;
+    display: none;
+} 
+
+body {
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* navigation section */
+#nav-menu {
+    height: 12vh;
+    width: 100vw;
+    background-color: #6bd45d;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* styling logo & animation added to logo */
+#logo {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 7px;
+    animation: tilt-shaking 1s infinite;
+}
+
+/* styling home button & ading animation to it */
+#home {
+    margin-left: auto;
+    margin-top: 18px;
+    height: 40%;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: all 0.3s linear;
+}
+
+#home:hover {
+    animation: tilt-shaking 1s;
+    color: aliceblue;
+}
+
+/* styling favourite button & adding animation to it */
+#favourite_btn {
+    margin-top: 20px;
+    margin-right: 10px;
+    height: 40%;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#favourite_btn:hover {
+    animation: tilt-shaking 1s;
+    color: aliceblue;
+}
+
+/* tilt & shaking effect */
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+/* header & main section */
+
+#content {
+    height: 88vh;
+    width: 100vw;
+    background-image: url(/images/bg_img4.jpg);
+    background-size: 100vw 88vh;
+    background-repeat: no-repeat;
+}
+
+/* header section */
+#header {
+    height: 30vh;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-left: 0px;
+}
+#h1 {
+    margin: 0px;
+    color: whitesmoke;
+    letter-spacing: 6px;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+/* styling search box & text within */
+#search_box {
+    height: 25%;
+    width: 73%;
+    outline: none;
+    border-style: hidden;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 10px;
+
+}
+
+#h3 {
+    margin: 0px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* main section */
+
+#main {
+    padding-left: 45px;
+    height: 45vh;
+    width: 65vw;
+    margin-left: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+/* styling fetched food cards */
+.food_card {
+    background-color: #6bd45d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 46vh;
+    width: 15vw;
+    min-width: 220px;
+    min-height: 315px;
+    margin: 6px;
+}
+
+/* styling cards rendered */
+.card_img_div {
+    height: 60%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card_img {
+    height: 200px;
+    width: 200px;
+    border-radius: 35%;
+}
+
+.card_text_para {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.card_lower_div {
+    height: 12%;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* styling button of cards */
+.btn {
+    font-family: cursive;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+    height: 75%;
+    width: 52%;
+    border-radius: 20px;
+    border: 1px solid #fff89b;
+}
+
+.btn:hover {
+    color: black;
+    background-color: #fff89b;
+    border: 2px solid black;
+}
+
+/* google icons script: material symbol, for heart icon */
+.material-symbols-sharp {
+    color: #fff89b;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+.material-symbols-sharp:hover {
+    color: red;
+}
+
+/* styling display recipes on clicking view button */
+.Recipe_card {
+    height: 80vh;
+    width: 60vw;
+    background-color: #6bd45d;
+    position: absolute;
+    top: 15vh;
+    left: 2.5vw;
+    border-radius: 35px;
+    display: flex;
+    box-shadow: 5px 5px 50px #fff89b;
+}
+
+#left {
+    height: 100%;
+    width: 40%;
+    margin-left: 20px;
+    margin-top: 10vh;
+}
+
+#left_upper {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#left_upper_img {
+    height: 270px;
+    width: 270px;
+    border-radius: 0px;
+}
+
+#left_upper_p1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#left_upper_p2 {
+    font-family: cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-top: -25px;
+    margin-bottom: 30px;
+}
+
+#left_lower {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#left_lower_btn {
+    height: 45%;
+    width: 100%;
+    font-family: cursive;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid #fff89b;
+}
+
+#left_lower_btn:hover {
+    color: black;
+    background-color: #fff89b;
+    border: 2px solid black;
+}
+
+
+#right {
+    height: 85%;
+    width: 60%;
+    margin-right: 40px;
+    margin-top: 10vh;
+    margin-left: 40px;
+    overflow-y: scroll;
+}
+
+#right_inst {
+    font-family: cursive;
+    font-size: 1.7rem;
+    margin: 10px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#right_p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: black;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.cross {
+    position: absolute;
+    top: 3vh;
+    right: 1.5vw;
+    font-size: 1.8rem; 
+}
+
+/* google icons script: using for heart button */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+.material-symbols-outlined:hover {
+    color: red;
+}
+
+
+
+/* styling no recipe found message & adding animation */
+#error1 {
+    width: 80%;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(238, 75, 43);
+    text-align: center;
+    animation: horizontal-shaking .5s infinite;
+}
+
+
+  /* horizontal shaking effect */
+  @keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }
+
+/* Favourite section */
+
+#favourite_container {
+    height: 100vh;
+    width: 360px;
+    right: -360px;
+    position: fixed;
+    transition: right 0.3s linear;
+}
+
+/* styling FAV head section  */
+#fav_head {
+    height: 12vh;
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6bd45d;
+}
+
+#fav_head h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding-left: 1vw;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* styling delete button of FAV section */
+.delete-sign{
+    position: absolute;
+    top: 4vh;
+    right: 1vw;
+    height: 2vh;
+}
+
+.delete-sign:hover{
+    cursor: pointer;
+}
+
+/* styling where FAV cards will be rendered */
+#fav_body {
+    box-sizing: border-box;
+    padding-top: 10px;
+    height: 90vh;
+    width: 360px;
+    /* background-color: #212529; */
+    background-image: linear-gradient(#fff89b,#f2ec4d);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+#fav_body h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 40vh;
+}
+
+.card_lower_div_fav {
+    height: 10%;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* styling FAV card buttons */
+.btn1 {
+    font-family: cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    height: 90%;
+    width: 40%;
+    border-radius: 20px;
+    border: 1px solid #fff89b;
+    margin: 5px;
+}
+
+.btn1:hover {
+    color: black;
+    background-color: #fff89b;
+    border: 2px solid black;
+}
+
+
+/* media queries for responsiveness */
+
+ @media screen and (max-width: 900px){
+     /* No search found */
+    #error1 {
+        font-size: 2rem;
+    }
+     
+    /* home page */
+    #header {
+        width: 100vw;
+    }
+
+    /* main section food card*/
+    #main {
+        width: 100vw;
+        margin-left: 0px;
+        justify-content: center;
+    }
+
+    /* Recipe_card Section*/
+    .Recipe_card {
+        width: 90vw;
+        left: 5vw;
+    }
+
+    #left_upper {
+        margin-top: 0vw;
+    }
+
+    #left_upper_img {
+        height: 200px;
+        width: 200px;
+    }
+
+    #left_lower {
+        margin-top: -5vh;
+    }
+
+    #right_inst {
+        font-size: 1.5rem;
+    }
+    
+    .cross {
+        top: 2.4vh;
+        right: 2.7vw;
+    }
+ }
+
+ @media screen and (max-width: 500px) {
+     /* No search found */
+    #error1 {
+        font-size: 1.5rem;
+    }
+
+    #sad {
+        font-size: 4.5rem;
+    }
+
+    /* nav bar */
+    #text {
+        font-size: 0.8rem;
+        margin-top: 26px;
+    }
+    
+    #favourite_btn {
+        font-size: 0.7rem;
+        margin-left: auto;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+
+/*     #home {
+        position: absolute;
+        visibility: hidden;
+    } */
+
+    /* home page */
+    #h1 {
+        letter-spacing: 3px;
+        font-size: 1.5rem;
+    }
+    
+    #h3 {
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+
+    /* Recipe_card Section*/
+    .Recipe_card {
+        flex-direction: column;
+    }
+    
+    #left {
+        height: 50%;
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 3vh;
+    }
+    
+    #left_upper {
+        height: 90%;
+    }
+    
+    #left_upper_img {
+        height: 160px;
+        width: 160px;
+    }
+    
+    #left_upper_p1 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    
+    #left_upper_p2 {
+        font-size: 0.8rem;
+    }
+    
+    #left_lower {
+        height: 25%;
+        margin-top: 0vh;
+    }
+    
+    #left_lower_btn {
+        font-size: 0.8rem;
+    }
+    
+    #right {
+        height: 37.5%;
+        width: 90%;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 4vh;
+    }
+    
+    #right_inst {
+        font-size: 1.4rem;
+    }
+    
+    #right_p {
+        font-size: 0.9rem;
+        margin-top: 12px;
+    }
+
+    .cross {
+        top: 2.3vh;
+        right: 4.2vw;
+        font-size: 1.2rem; 
+    }
+ }
+
+ 
+

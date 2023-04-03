@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipes app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon_icon1.png">
+
+    <!-- using material symbols of google font APIs -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div id="container">
+        <!-- navigation section containing logo/ home & favourites(FAV)-->
+        <nav id="nav-menu">
+            <div>
+                <img id="logo" src="/images/logo1.png" alt="logo failed to load">
+            </div>
+            <div>
+                <button id="home"><a href="index.html">🏠</a>HOME</button>
+                <button id="favourite_btn">💗FAVOURITES</button>
+            </div>
+            
+        </nav>
+
+        
+        <div id="content">
+            <!-- header section conating autotype text & search bar -->
+            <header id="header">
+                <div class="typewriter">
+                    <h1 id="h1">Search Your Recipes Here!😋😋</h1>
+                </div>
+                <input id="search_box" type="search" placeholder="type here... ">
+            </header>
+            
+            <!-- main section where cards & view section willbe rendered -->
+            <main id="main"> </main>
+        </div>
+    </div>
+
+    <!-- Favourite section -->
+    <div id="favourite_container">
+        <!-- fav header, containing colse fav section button & Heading -->
+        <div id="fav_head">
+            <h1>💗SAVED RECIPES</h1>
+            <span id="EXIT" class="delete-sign">❌</span>
+        </div>
+        <!-- favourite recipes are rendered here -->
+        <div id="fav_body">
+            <!-- intially no recipes will be shown, only text will be rendered -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!--  End code -->
