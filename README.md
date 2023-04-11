@@ -1,13 +1,14 @@
-# Meal_app
+# recipe_web_application
 
-#Techstack HTML CSS JS
+#Techstack HTML CSS JS API
 
 #Functionality:
 1) app renders meals from AP1 based on relevant search 
-2) meals/data received are rendered on page as cards
-3)these cards can be added in favourite section of app
+2) meals/data received are rendered on page as cards 
+3) these cards can be added in favourite section of app
 4) each card has a functionality of view_details & add to favourite section
-4) cards in favourite section have option of view details & removed
+5) cards in favourite section have option of view details & removed
+6) local storage used
 
 
 #APIused: https://www.themealdb.com/api/json/v1/1/
@@ -23,4 +24,4 @@
  1) download & extract in folder
  2) open folder with VS code
  3) install live server in vs code
- 4) righnt click on index.html file & open with live server
+ 4) right click on index.html file & open with live server
